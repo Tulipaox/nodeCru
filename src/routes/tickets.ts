@@ -1,5 +1,6 @@
 import {IncomingMessage, ServerResponse} from "node:http"
-import {create} from "../controllers/create.ts"
+import {create} from "../controllers/create"
+import { Database } from "../database/database"
 
 interface IncomingMessageWithBody extends IncomingMessage {
     body?: any
@@ -7,6 +8,12 @@ interface IncomingMessageWithBody extends IncomingMessage {
 
 export const tickets = [
     {
+        method: "POST",
+        path: "/tickets",
+        controller: create,
+    },
+
+     {
         method: "POST",
         path: "/tickets",
         controller: create,

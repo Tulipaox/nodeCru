@@ -1,3 +1,3 @@
-import { tickets } from "./tickets.ts"
+import { tickets } from "./tickets"
 
 export const routes = [...tickets]

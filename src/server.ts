@@ -1,6 +1,6 @@
 import http, {IncomingMessage, ServerResponse} from "node:http"
-import { jsonHandler } from "./middlewares/jsonHandler.ts"
-import { routeHandler } from "./middlewares/routeHandler.ts"
+import { jsonHandler } from "./middlewares/jsonHandler"
+import { routeHandler } from "./middlewares/routeHandler"
 
 interface IncomingMessageWithBody extends IncomingMessage {
     body?: any
